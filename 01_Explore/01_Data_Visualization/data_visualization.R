@@ -40,6 +40,14 @@ ggplot(data = mpg) +
 ggplot(data = mpg) +
   geom_point(mapping = aes(x=displ, y=hwy, shape=class))
 
+# Setting aesthetic properties manually
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x=displ, y=hwy), color='blue')
+
+# Learn more about an in-library dataset by using ?<dataset>
+?mpg
+
+
 
 
 
