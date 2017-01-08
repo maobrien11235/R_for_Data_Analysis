@@ -9,10 +9,20 @@
 
 
 
-#Model Flow:
-#Import->Tidy->Transform->Visualize->Model->Communicate
+# Model Flow:
+# Import->Tidy->Transform->Visualize->Model->Communicate
 #               ^                    ^
 #               |                    |
 #               ----------------------
 #
+# Import == Pulling data into R
+# Tidy == Put data in a consistent form for modeling
+# Transform == Narrowing dataset to obs of interest
+# Visualiztion == turn data into graphs to understand 
+#                 the dataset
+# Modeling == quantitative method, system, or approach
+#             that applies statistical, economic, financial,
+#             or mathematical theories, techniques, and assumptions
+#             to process input data into estimates
+# Communication == convey results to audience
 
