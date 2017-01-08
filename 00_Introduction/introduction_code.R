@@ -25,4 +25,9 @@
 #             or mathematical theories, techniques, and assumptions
 #             to process input data into estimates
 # Communication == convey results to audience
+#
+# Look into data.table if I start to use datasets that 
+# are between 10 and 100 GB. Larger than that, it may be
+# better to reformulate my problem.
 
+install.packages('tidyverse')
