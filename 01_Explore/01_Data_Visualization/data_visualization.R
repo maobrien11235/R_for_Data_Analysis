@@ -47,6 +47,11 @@ ggplot(data = mpg) +
 # Learn more about an in-library dataset by using ?<dataset>
 ?mpg
 
+#=========================================================#
+#                                                         #
+#                     Facets                              #
+#                                                         #
+#=========================================================#
 
 
 
