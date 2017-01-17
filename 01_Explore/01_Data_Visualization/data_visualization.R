@@ -53,6 +53,50 @@ ggplot(data = mpg) +
 #                                                         #
 #=========================================================#
 
+# facet_wrap() facets plots by a single var
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_wrap(~ class, nrow = 2)
+
+# facet_grid() facets plots with a combination of two vars
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ cyl)
+
+
+#=========================================================#
+#                                                         #
+#                 Geometric Objects                       #
+#                                                         #
+#=========================================================#
+
+# Scatter Plot
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+# Smoothed Linear Plot
+ggplot(data = mpg) +
+  geom_smooth(mapping = aes(x = displ, y = hwy))
+
+# Changed line aesthetic
+ggplot(data = mpg) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy, linetype= drv))
+
+# We can also put multiple geoms on a same graph
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth(mapping = aes(x = displ, y =hwy))
+
+# We can simplify the above using the ggplot line
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
+  geom_point() +
+  geom_smooth()
+
+# We can also use the above and add local flavor to a geom
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
+  geom_point(mapping = aes(color = class)) +
+  geom_smooth()
+
 
 
 
