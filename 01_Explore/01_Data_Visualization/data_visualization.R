@@ -1,7 +1,8 @@
 # 08JAN2016
 # Explore.Data_Visualization
-
+install.packages('tidyverse')
 library(tidyverse)
+library(ggplot2)
 
 # Let's start with a simple question: 
 #   Do larger engines use more gas?
@@ -9,7 +10,7 @@ library(tidyverse)
 # Our dataset
 mpg
 
-# First plot to see displ(as in, engine size)
+# First plot to# see displ(as in, engine size)
 # and hwy(as in, highway miles per gallon)
 
 ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy))
@@ -46,6 +47,7 @@ ggplot(data = mpg) +
 
 # Learn more about an in-library dataset by using ?<dataset>
 ?mpg
+
 
 #=========================================================#
 #                                                         #
@@ -96,6 +98,47 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
   geom_point(mapping = aes(color = class)) +
   geom_smooth()
+
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
+         geom_point(mapping = aes(color = class)) +
+         geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
+       
+
+#=========================================================#
+#                                                         #
+#             Statistical Transformations                 #
+#                                                         #
+#=========================================================#
+
+ggplot(data = diamonds) +
+  geom_bar(mapping = aes(x = cut))
+
+# Note you can use the underlying statistical operation
+# for the graphs as well as the ggplot (note the 
+# use of stat_count instead of geom_bar)
+
+ggplot(data = diamonds) + 
+  stat_count(mapping = aes(x = cut))
+
+#=========================================================#
+#                                                         #
+#                 Position Adjustments                    #
+#                                                         #
+#=========================================================#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
